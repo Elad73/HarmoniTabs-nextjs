@@ -1,20 +1,14 @@
-import Image from "next/image";
-import homeImg from "public/images/harmonica-band.png"
+import Hero from "@/components/heros";
+import homeImg from "public/images/home2.png"
 
 
 export default function Home() {
   return (
     <div>
-      <h1>home page</h1>
-      <div className="absolute -z-10 inset-0">
-        <Image
-          src={homeImg}
-          alt="Harmonica band playing on stage"
-          fill
-          style={{ objectFit: 'cover' }}
-          />
-      </div>
+      <Hero
+        imgData={homeImg}
+        imgAlt="Harmonica band playing on stage"
+        title="Home page" />
     </div>
-
   );
 }
