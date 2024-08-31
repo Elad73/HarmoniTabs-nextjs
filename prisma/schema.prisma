@@ -1,0 +1,24 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Tabs {
+  id Int @id @default(autoincrement())
+       slug String 
+       title String
+       image String
+       summary String
+       tabs String
+       tab_creator_name String
+       creator_email String
+       artist_name String
+       song_creation_year String
+}
